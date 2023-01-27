@@ -1,8 +1,9 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize('ptscmeicweb', 'g2xy5ksk5l0156b7q9ez','pscale_pw_5EApJQKSbOW6iPRhS2UBvTHJG8gIysP2jMMezqhh4iL', {
-    host: 'us-east.connect.psdb.cloud',
-    dialect: 'mysql'
+const db = new Sequelize('blcdr404egy5ji4mgjpl', 'u286mwgrlvpbidog','XBLpKkNOmxXQ8ntty7X', {
+    host: 'blcdr404egy5ji4mgjpl-mysql.services.clever-cloud.com',
+    dialect: 'mysql',
+    port: '21215'
     }
 )
 

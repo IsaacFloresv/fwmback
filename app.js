@@ -10,7 +10,7 @@ import persRouter from './routes/PersRoutes.js'
 import comerRouter from './routes/ComerRoutes.js'
 
 const app = express()
-
+const port = 4000
 app.use(cors())
 app.use(express.json())
 app.use('/prov', provRouter)
@@ -30,6 +30,6 @@ try {
     console.log('Error de conexion a la DB =', error)
 }
 
-app.listen(4000, ()=>{
-    console.log('Server UP run in https://localhost:4000/')
+app.listen(port, ()=>{
+    console.log(`Server UP run in https://localhost:${port}/`)
 })

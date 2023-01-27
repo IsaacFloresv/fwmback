@@ -5,12 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon dev"
+    "server": "nodemon app",
+    "client": "cd.. && npm start --prefix ./front",
+    "start": "concurrently --kill-others-on-fall  \"nodemon app \" \"npm run client \""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.6.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mysql2": "^3.0.1",
