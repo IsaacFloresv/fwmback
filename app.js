@@ -8,7 +8,7 @@ import cantRouter from './routes/CantRoutes.js'
 import distRouter from './routes/DistRoutes.js'
 import persRouter from './routes/PersRoutes.js'
 import comerRouter from './routes/ComerRoutes.js'
-import { APP_PORT } from "./config.js"
+import { APP_PORT } from "./p_config.js"
 
 const app = express()
 const PORT = APP_PORT
