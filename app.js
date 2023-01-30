@@ -8,9 +8,10 @@ import cantRouter from './routes/CantRoutes.js'
 import distRouter from './routes/DistRoutes.js'
 import persRouter from './routes/PersRoutes.js'
 import comerRouter from './routes/ComerRoutes.js'
+import { APP_PORT } from "./config.js"
 
 const app = express()
-const port = 4000
+const PORT = APP_PORT
 app.use(cors())
 app.use(express.json())
 app.use('/prov', provRouter)
@@ -30,6 +31,6 @@ try {
     console.log('Error de conexion a la DB =', error)
 }
 
-app.listen(port, ()=>{
-    console.log(`Server UP run in https://localhost:${port}/`)
+app.listen(PORT, ()=>{
+    console.log(`Server UP run in https://localhost:${PORT}/`)
 })

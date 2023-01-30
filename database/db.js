@@ -1,9 +1,10 @@
 import { Sequelize } from "sequelize";
+import { DB_DATABASE, DB_HOST, DB_PASSWORD, DB_PORT, DB_USER } from "../config.js";
 
-const db = new Sequelize('blcdr404egy5ji4mgjpl', 'u286mwgrlvpbidog','XBLpKkNOmxXQ8ntty7X', {
-    host: 'blcdr404egy5ji4mgjpl-mysql.services.clever-cloud.com',
+const db = new Sequelize(DB_DATABASE, DB_USER,DB_PASSWORD, {
+    host: DB_HOST,
     dialect: 'mysql',
-    port: '21215'
+    port: DB_PORT
     }
 )
 
