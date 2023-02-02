@@ -19,7 +19,6 @@ app.use('/cant', cantRouter)
 app.use('/dist', distRouter)
 app.use('/pers', persRouter)
 app.use('/comer', comerRouter)
-app.use('/sentM', )
 
 /*app.get('/', (req, res)=>{
     res.send('HOLA MUNDO')

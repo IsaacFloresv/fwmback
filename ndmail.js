@@ -24,4 +24,4 @@ const info = await transporter.sendMail({
     html: "<p>Aqui va la informacion</p>",
 }, (err, info) => {
     if (err) res.status(200).send({ success: false })
-}
+})
