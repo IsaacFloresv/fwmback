@@ -3,7 +3,7 @@ import AsuModel from "../models/AsuModel.js";
 //Metodos CRUD
 
 //Mostrar todos los registros
-export const getAllAsunto = async (req, res) => {
+export const getAllAsu = async (req, res) => {
     try {
         const asunto = await AsuntoModel.findAll()
         res.json(asunto) 
@@ -13,7 +13,7 @@ export const getAllAsunto = async (req, res) => {
 }
 
 //Mostrar un registro
-export const getAsunto = async (req, res) => {
+export const getAsu = async (req, res) => {
     try {
         const asunto = await AsuntoModel.findAll({
             where:{id:req.params.id_materia}
@@ -25,7 +25,7 @@ export const getAsunto = async (req, res) => {
 }
 
 //Crear un registro
-export const createMateria = async(req, res) => {
+export const createAsu = async(req, res) => {
     console.log(req.body)
     try {
         await AsuntoModel.create(req.body)
@@ -38,7 +38,7 @@ export const createMateria = async(req, res) => {
 }
 
 //Actualizar
-export const updateMateria = async(req, res) => {
+export const updateAsu = async(req, res) => {
     try {
         AsuntoModel.update(req.body, {
             where: {id: req.params.id_asunto}
@@ -52,7 +52,7 @@ export const updateMateria = async(req, res) => {
 
 
 //Eliminar
-export const deleteMateria = async(req, res) => {
+export const deleteAsu = async(req, res) => {
     console.log(req.params.id)
     try {
         AsuntoModel.destroy({

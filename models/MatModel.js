@@ -5,9 +5,9 @@ import { DataTypes } from "sequelize";
 
 
 const MatModel = db.define('materias', {
-    id_provincia: { type: DataTypes.INTEGER },
-    name_provincia: { type: DataTypes.STRING },
-    id_contry: { type: DataTypes.INTEGER}
+    ident: { type: DataTypes.INTEGER },
+    id_materia: { type: DataTypes.INTEGER },
+    desc_materia: { type: DataTypes.STRING}
 },{
     timestamps: false
 })

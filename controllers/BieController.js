@@ -3,7 +3,7 @@ import BieModel from "../models/BieModel.js";
 //Metodos CRUD
 
 //Mostrar todos los registros
-export const getAllBien = async (req, res) => {
+export const getAllBie = async (req, res) => {
     try {
         const bien = await BieModel.findAll()
         res.json(bien) 
