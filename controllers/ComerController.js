@@ -24,6 +24,18 @@ export const getComer = async (req, res) => {
     }
 }
 
+//Mostrar un registro por nombre de Fantasia
+export const getComerxNF = async (req, res) => {
+    try {
+        const comer = await comerModel.findAll({
+            where:{fantasy_name:req.params.fantasy_name}
+        })
+        res.json(comer)
+    } catch (error) {
+        res.json({message: error.message})
+    }
+}
+
 //Crear un registro
 export const createComer = async(req, res) => {
     console.log(req.body)
