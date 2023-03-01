@@ -16,7 +16,7 @@ export const getAllMat = async (req, res) => {
 export const getMat = async (req, res) => {
     try {
         const materia = await MatModel.findAll({
-            where:{ident:req.params.id_materia}
+            where:{ident:req.params.id}
         })
         res.json(materia)
     } catch (error) {
@@ -41,7 +41,7 @@ export const createMat = async(req, res) => {
 export const updateMat = async(req, res) => {
     try {
         MatModel.update(req.body, {
-            where: {ident: req.params.id_materia}
+            where: {ident: req.params.id}
         })
     } catch (error) {
         res.json({

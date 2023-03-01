@@ -16,7 +16,7 @@ export const getAllBie = async (req, res) => {
 export const getBie = async (req, res) => {
     try {
         const bien = await BieModel.findAll({
-            where:{id:req.params.id}
+            where:{ident:req.params.id}
         })
         res.json(bien)
     } catch (error) {
