@@ -37,7 +37,7 @@ const AsePressModel = db.define('asesoprese',{
     fchahech: {type: DataTypes.STRING },
     fchagar: {type: DataTypes.STRING },
     desch: {type: DataTypes.STRING },
-    desch: {type: DataTypes.STRING },
+    respe: {type: DataTypes.STRING },
     id_audio: {type: DataTypes.STRING },
     id_correo: {type: DataTypes.STRING },
 },{
