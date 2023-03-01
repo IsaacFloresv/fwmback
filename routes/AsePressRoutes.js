@@ -1,11 +1,11 @@
 import express from 'express'
 import {getAllAsePes, getAsePes, createAsePes, updateAsePes, deleteAsePes} from '../controllers/AsePressController.js'
 
-const AsePressRouter = express.Router()
+const asePressRouter = express.Router()
 
-AsePressRouter.get('/', getAllAsePes)
-AsePressRouter.get('/:id', getAsePes)
-AsePressRouter.post('/', createAsePes)
-AsePressRouter.put('/:id', updateAsePes)
+asePressRouter.get('/', getAllAsePes)
+asePressRouter.get('/:id', getAsePes)
+asePressRouter.post('/', createAsePes)
+asePressRouter.put('/:id', updateAsePes)
 
-export default AsePressRouter
+export default asePressRouter

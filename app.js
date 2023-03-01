@@ -12,6 +12,7 @@ import distRouter from './routes/DistRoutes.js'
 import persRouter from './routes/PersRoutes.js'
 import comerRouter from './routes/ComerRoutes.js'
 import authRouter from './routes/AuthRoutes.js'
+import asePressRouter from './routes/AsePressRoutes.js'
 
 
 const app = express()
@@ -28,6 +29,7 @@ app.use('/dist', distRouter)
 app.use('/pers', persRouter)
 app.use('/comer', comerRouter)
 app.use('/auth', authRouter)
+app.use('/asepress', asePressRouter)
 
 /*app.get('/', (req, res)=>{
     res.send('HOLA MUNDO')
