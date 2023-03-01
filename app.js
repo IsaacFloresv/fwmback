@@ -30,6 +30,8 @@ app.use('/pers', persRouter)
 app.use('/comer', comerRouter)
 app.use('/auth', authRouter)
 app.use('/asepress', asePressRouter)
+app.use('/amp', asePressRouter)
+
 
 /*app.get('/', (req, res)=>{
     res.send('HOLA MUNDO')
