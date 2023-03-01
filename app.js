@@ -11,7 +11,7 @@ import cantRouter from './routes/CantRoutes.js'
 import distRouter from './routes/DistRoutes.js'
 import persRouter from './routes/PersRoutes.js'
 import comerRouter from './routes/ComerRoutes.js'
-import datosRouter from './routes/DatosRoutes.js'
+import authRouter from './routes/AuthRoutes.js'
 
 
 const app = express()
@@ -27,7 +27,7 @@ app.use('/cant', cantRouter)
 app.use('/dist', distRouter)
 app.use('/pers', persRouter)
 app.use('/comer', comerRouter)
-app.use('/ndmail', datosRouter)
+app.use('/auth', authRouter)
 
 /*app.get('/', (req, res)=>{
     res.send('HOLA MUNDO')
