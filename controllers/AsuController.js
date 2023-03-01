@@ -5,7 +5,7 @@ import AsuModel from "../models/AsuModel.js";
 //Mostrar todos los registros
 export const getAllAsu = async (req, res) => {
     try {
-        const asunto = await AsuntoModel.findAll()
+        const asunto = await AsuModel.findAll()
         res.json(asunto) 
     } catch (error) {
         res.json({message: error.message})
@@ -15,7 +15,7 @@ export const getAllAsu = async (req, res) => {
 //Mostrar un registro
 export const getAsu = async (req, res) => {
     try {
-        const asunto = await AsuntoModel.findAll({
+        const asunto = await AsuModel.findAll({
             where:{id:req.params.id_materia}
         })
         res.json(asunto)
@@ -28,7 +28,7 @@ export const getAsu = async (req, res) => {
 export const createAsu = async(req, res) => {
     console.log(req.body)
     try {
-        await AsuntoModel.create(req.body)
+        await AsuModel.create(req.body)
         res.json({
             "message":"Registro creado correctamente"
         })
@@ -40,7 +40,7 @@ export const createAsu = async(req, res) => {
 //Actualizar
 export const updateAsu = async(req, res) => {
     try {
-        AsuntoModel.update(req.body, {
+        AsuModel.update(req.body, {
             where: {id: req.params.id_asunto}
         })
     } catch (error) {
@@ -55,7 +55,7 @@ export const updateAsu = async(req, res) => {
 export const deleteAsu = async(req, res) => {
     console.log(req.params.id)
     try {
-        AsuntoModel.destroy({
+        AsuModel.destroy({
             where: {id: req.params.id_asunto}
         })
     } catch (error) {
