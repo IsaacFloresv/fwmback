@@ -56,7 +56,7 @@ export const deleteMat = async(req, res) => {
     console.log(req.params.id)
     try {
         MatModel.destroy({
-            where: {id: req.params.id}
+            where: {ident: req.params.id}
         })
     } catch (error) {
         res.json({message: error.message})

@@ -16,7 +16,7 @@ export const getAllBie = async (req, res) => {
 export const getBie = async (req, res) => {
     try {
         const bien = await BieModel.findAll({
-            where:{id:req.params.id_bien}
+            where:{id:req.params.id}
         })
         res.json(bien)
     } catch (error) {
@@ -41,7 +41,7 @@ export const createBie = async(req, res) => {
 export const updateBie = async(req, res) => {
     try {
         BieModel.update(req.body, {
-            where: {id: req.params.id_bien}
+            where: {ident: req.params.id}
         })
     } catch (error) {
         res.json({
@@ -56,7 +56,7 @@ export const deleteBie = async(req, res) => {
     console.log(req.params.id)
     try {
         BieModel.destroy({
-            where: {id: req.params.id_bien}
+            where: {ident: req.params.id}
         })
     } catch (error) {
         res.json({message: error.message})
