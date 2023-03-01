@@ -5,7 +5,7 @@ import { DataTypes } from "sequelize";
 
 
 const MatModel = db.define('materias', {
-    ident: { type: DataTypes.INTEGER },
+    ident: { type: DataTypes.INTEGER , primaryKey: true},
     id_materia: { type: DataTypes.INTEGER },
     nomb_materia: { type: DataTypes.STRING}
 },{

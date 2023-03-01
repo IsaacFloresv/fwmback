@@ -5,7 +5,7 @@ import { DataTypes } from "sequelize";
 
 
 const AsuModel = db.define('asunto', {
-    ident: { type: DataTypes.INTEGER },
+    ident: { type: DataTypes.INTEGER, primaryKey: true},
     id_asunto: { type: DataTypes.INTEGER },
     id_materia: { type: DataTypes.INTEGER },
     desc_asunto: { type: DataTypes.STRING }
