@@ -16,7 +16,7 @@ export const getAllAsu = async (req, res) => {
 export const getAsu = async (req, res) => {
     try {
         const asunto = await AsuModel.findAll({
-            where:{ident:req.params.id_materia}
+            where:{id_materia:req.params.id}
         })
         res.json(asunto)
     } catch (error) {
@@ -41,7 +41,7 @@ export const createAsu = async(req, res) => {
 export const updateAsu = async(req, res) => {
     try {
         AsuModel.update(req.body, {
-            where: {ident: req.params.id_asunto}
+            where: {id_asunto: req.params.id}
         })
     } catch (error) {
         res.json({
