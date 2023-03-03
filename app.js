@@ -13,6 +13,7 @@ import persRouter from './routes/PersRoutes.js'
 import comerRouter from './routes/ComerRoutes.js'
 import authRouter from './routes/AuthRoutes.js'
 import asePressRouter from './routes/AsePressRoutes.js'
+import userRouter from './routes/UserRoutes.js'
 
 
 const app = express()
@@ -31,6 +32,7 @@ app.use('/comer', comerRouter)
 app.use('/auth', authRouter)
 app.use('/asepress', asePressRouter)
 app.use('/amp', asePressRouter)
+app.use('/user', userRouter)
 
 
 /*app.get('/', (req, res)=>{
