@@ -14,6 +14,7 @@ import comerRouter from './routes/ComerRoutes.js'
 import authRouter from './routes/AuthRoutes.js'
 import asePressRouter from './routes/AsePressRoutes.js'
 import userRouter from './routes/UserRoutes.js'
+import estadistRouter from './routes/EstadistRoutes.js'
 
 
 const app = express()
@@ -33,6 +34,7 @@ app.use('/auth', authRouter)
 app.use('/asepress', asePressRouter)
 app.use('/amp', asePressRouter)
 app.use('/user', userRouter)
+app.use('/topelemt', estadistRouter)
 
 
 /*app.get('/', (req, res)=>{
