@@ -3,7 +3,7 @@ import { getTopElem } from "../controllers/EstadistidController.js";
 
 const estadistRouter = express.Router()
 
-estadistRouter.get('/', getTopElem)
+estadistRouter.put('/', getTopElem)
 //estadistRouter.get('/:id', getProv)
 //estadistRouter.post('/', createProv)
 //estadistRouter.put('/:id', updateProv)
