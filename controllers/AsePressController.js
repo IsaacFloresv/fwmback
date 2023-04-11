@@ -18,7 +18,7 @@ export const getMayAsePes = async (req, res) => {
       const apm = await AsePressModels.findAll();
       console.log(apm)
       for (let x in apm) {
-        may = apm[x].id;
+        may = apm[x].id_report;
       }
       res.json(may);
   } catch (error) {
