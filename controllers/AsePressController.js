@@ -46,7 +46,7 @@ export const createAsePes = async (req, res) => {
       message: "Registro creado correctamente",
     });
   } catch (error) {
-    res.json({ message: error.message });
+    res.json({ status: 400, message: error.message });
   }
 };
 
