@@ -4,7 +4,7 @@ import AsePressModels from "../models/AsePressModels.js";
 //Mostrar todos los registros
 export const getAllAsePes = async (req, res) => {
   try {
-    const apm = await AsePressModels.findAll();
+    const apm = (await AsePressModels.findAll()).reverse();
     res.json(apm);
   } catch (error) {
     res.json({ message: error.message });
