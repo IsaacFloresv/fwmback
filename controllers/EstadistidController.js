@@ -22,7 +22,7 @@ var inimes = year+"-"+mes+"-01"
 var finmes = year+"-"+mes+"-"+dayfin
 
 
-export const getTopElem = async (req, res) => {
+export const putTopElem = async (req, res) => {
     try {
         const query1 = `SELECT ` + req.body.elemt + ` AS elemt, COUNT(` + req.body.elemt + `) AS total FROM asesopreses
         GROUP BY `+ req.body.elemt + ` ORDER BY total DESC LIMIT ` + req.body.top + ``

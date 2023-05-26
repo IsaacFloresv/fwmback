@@ -1,9 +1,9 @@
 import express, { Router } from "express";
-import { getTopElem, getElemOrderDescForFech } from "../controllers/EstadistidController.js";
+import { putTopElem, getElemOrderDescForFech } from "../controllers/EstadistidController.js";
 
 const estadistRouter = express.Router()
 
-estadistRouter.put('/', getTopElem)
+estadistRouter.put('/', putTopElem)
 estadistRouter.get('/', getElemOrderDescForFech)
 //estadistRouter.get('/:id', getProv)
 //estadistRouter.post('/', createProv)
