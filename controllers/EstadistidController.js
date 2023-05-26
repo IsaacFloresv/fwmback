@@ -32,3 +32,33 @@ export const getTopElem = async (req, res) => {
         res.json({ message: error.message })
     }
 }
+
+//listar elimentos de mas reciente al mas viejo y limitado por rango de fechas
+export const getElemOrderDescForFech = async (req, res) => {
+    try {
+        const query1 = `SELECT * FROM asesopreses ORDER BY fchareg DESC`
+        const query2 = `SELECT * FROM asesopreses 
+        where (STR_TO_DATE(SUBSTRING_INDEX(fchareg, ' ', 1),'%e/%m/%Y') >= "` + req.body.fchaIni + `" 
+        AND STR_TO_DATE(SUBSTRING_INDEX(fchareg, ' ', 1),'%e/%m/%Y') <= "` + req.body.fchaFin + `")
+        ORDER BY fchareg DESC`
+        const query3 = `SELECT * FROM asesopreses 
+        where (STR_TO_DATE(SUBSTRING_INDEX(fchareg, ' ', 1),'%e/%m/%Y') >= "` + req.body.fchaIni + `" 
+        AND STR_TO_DATE(SUBSTRING_INDEX(fchareg, ' ', 1),'%e/%m/%Y') <= "` + req.body.fchaFin + `")`
+        console.log(req.body)
+        if (req.body.opc === 1) {
+            console.log("opc 1")
+            const dato = await db.query(query1)
+            res.json(dato)
+        } else if (req.body.opc === 2) {
+            console.log("opc 2")
+            const dato = await db.query(query2)
+            res.json(dato)
+        }else if (req.body.opc === 3) {
+            console.log("opc 3")
+            const dato = await db.query(query3)
+            res.json(dato)
+        } else { res.send("no hay resultados " + req.body) }
+    } catch (error) {
+        res.json({ message: error.message })
+    }
+  }
