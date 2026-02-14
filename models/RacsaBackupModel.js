@@ -2,8 +2,7 @@ import db from "../database/db.js";
 import { DataTypes } from "sequelize";
 
 const RacsaBackupModel = db.define('racsabackup', {
-    id: { type: DataTypes.INTEGER, primaryKey: true }, 
-    id_report: {type: DataTypes.INTEGER },
+    id_report: {type: DataTypes.INTEGER, primaryKey: true },
     fchareg: {type: DataTypes.STRING },
     id_agente: {type: DataTypes.STRING },
     status: {type: DataTypes.STRING },
