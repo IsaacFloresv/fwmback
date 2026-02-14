@@ -15,7 +15,6 @@ import authRouter from './routes/AuthRoutes.js'
 import asePressRouter from './routes/AsePressRoutes.js'
 import userRouter from './routes/UserRoutes.js'
 import estadistRouter from './routes/EstadistRoutes.js'
-import racsaRouter from './routes/RacsaBackupRoutes.js'
 
 
 const app = express()
@@ -36,7 +35,6 @@ app.use('/asepress', asePressRouter)
 app.use('/amp', asePressRouter)
 app.use('/user', userRouter)
 app.use('/topelemt', estadistRouter)
-app.use('/racsabackup', racsaRouter)
 
 
 /*app.get('/', (req, res)=>{
